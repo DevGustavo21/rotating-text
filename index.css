@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle,
+    #021128,
+    #03112c,
+    #061130,
+    #091033,
+    #0f0f36
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container__svg {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+}
+
+svg {
+  fill: currentColor;
+  height: 100%;
+  transform-origin: center;
+  width: 100%;
+  animation: rotation 6s linear infinite;
+  opacity: 0;
+  user-select: none;
+}
+
+text {
+  font-size: 11px;
+  color: rgb(225, 225, 225);
+}
+
+a {
+  padding: 10px 30px;
+  border: 2px solid rgb(225, 225, 225);
+  color: rgb(225, 225, 225);
+  font-size: 17px;
+  text-decoration: none;
+  z-index: 1;
+  background-image: -webkit-linear-gradient(
+    30deg,
+    #c266d3 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+a:hover {
+  background-position: 100%;
+  color: #c266d3;
+  border: 2px solid #c266d3;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg) scale(1);
+    filter: blur(0);
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  82.5% {
+    transform: rotate(180deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(360deg) scale(6);
+    filter: blur(10px);
+    opacity: 0;
+  }
+}
+
+
+.about{
+    height: 100vh;
+    background-color: #c266d3;
+}
